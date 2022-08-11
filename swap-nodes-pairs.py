@@ -36,18 +36,27 @@ def swapPairs(head):
     
     while current:
         # print("Swapping {} and {}".format(prev.val, current.val))
-        temp = current.next
-        current.next = prev
-        prev.next = temp
+        if current.next:
+            temp = current.next
+            current.next = prev
+            prev.next = temp
+        else:
+            print("hit the end so to speak")
+            current.next = prev
+            prev.next = None
 
-        print("list after swap: " + printList(current))
+        print(f"prev: {prev}, current: {current} before advancing")
+        print("list after relinking: " + printList(head))
         
         
         prev = prev.next
         if prev:
             current = prev.next
-        
+        else:
+            print("Not advancing current, prev is None")
     
+        print(f"prev: {prev}, current: {current} after advancing")
+        print("\n")
     return head
 
 
