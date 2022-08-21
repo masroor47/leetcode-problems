@@ -19,6 +19,7 @@ class LinkedList:
         result = "List: "
         while curr is not None:
             result += str(curr.val) + " "
+            curr = curr.next
 
         return result
 
