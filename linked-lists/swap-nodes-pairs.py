@@ -1,12 +1,12 @@
-from node import ListNode
+from node import Node
 
-item7 = ListNode(7)
-item6 = ListNode(6, item7)
-item5 = ListNode(5, item6)
-item4 = ListNode(4, item5)
-item3 = ListNode(3, item4)
-item2 = ListNode(2, item3)
-head = ListNode(1, item2)
+item7 = Node(7)
+item6 = Node(6, item7)
+item5 = Node(5, item6)
+item4 = Node(4, item5)
+item3 = Node(3, item4)
+item2 = Node(2, item3)
+head = Node(1, item2)
 
 def printList(head):
     current = head
