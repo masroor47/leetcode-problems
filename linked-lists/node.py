@@ -23,3 +23,12 @@ class LinkedList:
 
         return result
 
+
+def stringify_list(head):
+    curr = head
+    result = "List: "
+    while curr is not None:
+        result += str(curr.val) + " "
+        curr = curr.next
+
+    return result
